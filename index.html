@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gombalan Spesial</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 400px;
+    }
+    h1 {
+      color: #e91e63;
+    }
+    p {
+      font-size: 18px;
+      margin: 20px 0;
+    }
+    button {
+      background: #e91e63;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #c2185b;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Hey Kamu!</h1>
+  <p id="gombal-text">Klik tombol di bawah buat denger gombalan manis!</p>
+  <button onclick="tampilGombalan()">Gombalin Aku!</button>
+</div>
+
+<script>
+  const gombalan = [
+    "Kamu itu kaya kopi pagi, selalu bikin aku melek dan semangat!",
+    "Kalau kamu jadi bintang, langit pasti cemburu karena kamu terlalu terang.",
+    "Jarak mungkin memisahkan kita, tapi hati aku selalu nempel di kamu.",
+    "Kamu bukan matematika, tapi setiap kali mikirin kamu, hatiku berhitung terus.",
+    "Kalo disuruh milih antara napas dan kamu, aku pilih kamu. Soalnya tanpa kamu, aku gak bisa hidup."
+  ];
+
+  function tampilGombalan() {
+    const random = Math.floor(Math.random() * gombalan.length);
+    document.getElementById("gombal-text").innerText = gombalan[random];
+  }
+</script>
+
+</body>
+</html>
