@@ -2,99 +2,69 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toko Produk Digital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gombalan Spesial</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f2f2f2;
-    }
-
-    header {
-      background: #1e88e5;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .product-list {
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      padding: 20px;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      margin: 0;
     }
-
-    .product-card {
+    .card {
       background: white;
-      border-radius: 8px;
-      margin: 10px;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 400px;
     }
-
-    .product-card h2 {
-      margin-top: 0;
+    h1 {
+      color: #e91e63;
     }
-
-    .price {
-      font-weight: bold;
-      display: block;
-      margin: 10px 0;
+    p {
+      font-size: 18px;
+      margin: 20px 0;
     }
-
     button {
-      background: #43a047;
+      background: #e91e63;
       color: white;
       border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
       cursor: pointer;
     }
-
     button:hover {
-      background: #388e3c;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #e0e0e0;
+      background: #c2185b;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Toko Produk Digital</h1>
-  </header>
 
-  <main>
-    <section class="product-list">
-      <div class="product-card">
-        <h2>Ebook Panduan Sukses</h2>
-        <p>Pelajari strategi sukses dalam berkarier dan bisnis.</p>
-        <span class="price">Rp50.000</span>
-        <button onclick="buyProduct('Ebook Panduan Sukses')">Beli Sekarang</button>
-      </div>
-      <div class="product-card">
-        <h2>Template CV Profesional</h2>
-        <p>Template CV yang bisa langsung digunakan dan disesuaikan.</p>
-        <span class="price">Rp25.000</span>
-        <button onclick="buyProduct('Template CV Profesional')">Beli Sekarang</button>
-      </div>
-    </section>
-  </main>
+<div class="card">
+  <h1>Hey Kamu!</h1>
+  <p id="gombal-text">Klik tombol di bawah buat denger gombalan manis!</p>
+  <button onclick="tampilGombalan()">Gombalin Aku!</button>
+</div>
 
-  <footer>
-    <p>&copy; 2025 Toko Digital. All rights reserved.</p>
-  </footer>
+<script>
+  const gombalan = [
+    "Kamu itu kaya kopi pagi, selalu bikin aku melek dan semangat!",
+    "Kalau kamu jadi bintang, langit pasti cemburu karena kamu terlalu terang.",
+    "Jarak mungkin memisahkan kita, tapi hati aku selalu nempel di kamu.",
+    "Kamu bukan matematika, tapi setiap kali mikirin kamu, hatiku berhitung terus.",
+    "Kalo disuruh milih antara napas dan kamu, aku pilih kamu. Soalnya tanpa kamu, aku gak bisa hidup."
+  ];
 
-  <script>
-    function buyProduct(productName) {
-      alert(`Anda memilih membeli: ${productName}. Fitur pembayaran belum aktif.`);
-    }
-  </script>
+  function tampilGombalan() {
+    const random = Math.floor(Math.random() * gombalan.length);
+    document.getElementById("gombal-text").innerText = gombalan[random];
+  }
+</script>
+
 </body>
 </html>
